@@ -3,7 +3,6 @@
 set -e
 
 FILE_NAME="fake_file_name (file name is useless too)    "
-# FILE_NAME="$(basename $1)$(printf %45.45s)" # uncomment when norminette starts complain it
 PLACEHOLDER="PLACEHOLDER_FOR_FILE_NAME_UP_TO_45_CHARACTERS"
 
 if [ "$(grep -zEc \\/\\\*\ \\\*\{74\}\ \\\*\\/\\n\\/\\\*.\*\\\*\\/\\n\\/\\\*.\*\\\*\\/\\n\\/\\\*.\{3\}\(\[\^\ \]\*\).\*\\\*\\/\\n\\/\\\*.\*\\\*\\/\\n\\/\\\*\ \ \ By:\ \(\[\^\ \]\*\).\*\\\*\\/\\n\\/\\\*.\*\\\*\\/\\n\\/\\\*\ \ \ Created:\ \(\[\^\ \]\*\ \[\^\ \]\*\)\ by\ \(\[\^\ \]\*\).\*\\\*\\/\\n\\/\\\*\ \ \ Updated:\ \(\[\^\ \]\*\ \[\^\ \]\*\)\ by\ \(\[\^\ \]\*\).\*\\\*\\/\\n\\/\\\*.\*\\\*\\/\\n\\/\\\*\ \\\*\{74\}\ \\\*\\/\\n < "$1")" = "1" ] ; then
