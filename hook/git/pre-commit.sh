@@ -2,6 +2,4 @@
 
 set -e
 
-git diff --cached --name-only --diff-filter=ACM -- \
-  '*.c' '*.h' '*.sh' '*.mk' 'Makefile' \
-  | xargs -L1 sh hook//42header-remover.sh
+git diff --cached --name-only --diff-filter=ACM -- '*.c' '*.h' | xargs -L1 sh hook/script/42header-remover.sh
